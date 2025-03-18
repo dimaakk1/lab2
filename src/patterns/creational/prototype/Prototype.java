@@ -1,6 +1,6 @@
 package patterns.creational.prototype;
 
-public class Prototype implements Cloneable {
+public class Prototype {
     private String data;
 
     public Prototype(String data) {
