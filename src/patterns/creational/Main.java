@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Abstract Factory created: " + productX.getClass().getSimpleName());
 
         // Builder
-        BuilderProduct productBuilt = new ProductBuilder()
+        BuilderProduct productBuilt = new Builder()
                 .setPartA("A1")
                 .setPartB("B1")
                 .build();
