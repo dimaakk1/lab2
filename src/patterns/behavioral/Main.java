@@ -49,8 +49,13 @@ public class Main {
         store.notifyCustomers("Знижка 50% на всі товари!");
 
         // Strategy Pattern
-        PaymentStrategy payment = new CreditCardPayment();
-        payment.pay(50);
+        PaymentStrategy creditpayment = new CreditCardPayment();
+        PaymentStrategy cryptoPayment = new CryptoPayment();
+        PaymentContext paymmentContext = new PaymentContext();
+        paymmentContext.setPaymentStrategy(creditpayment);
+        paymmentContext.pay(200);
+        paymmentContext.setPaymentStrategy(cryptoPayment);
+        paymmentContext.pay(300);
 
         // State Pattern
         Context context = new Context();
